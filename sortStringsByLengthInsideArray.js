@@ -1,14 +1,27 @@
+/////////////////////////////////////////////////////////////////////////////
 let str = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
-
-function buildAstring(arr, n) {
+/////////////////////////////////////////////////////////////////////////////
+function buildAstring1(arr, n) {
+  let x = [];
     arr.forEach(function(i) {
-        console.log(i.length < n);
-        if (i.length < n) {
-
-        } else {
-
+        console.log(i.length <= n);
+        if (i.length > n) {
+          x.push(i);
         }
-    })
-    return arr;
+    });
+    console.log(x);
+    return str = x;
 }
-buildAstring(str, 5);
+buildAstring1(str, 3);
+////////////////////////////////////////////////////////////////////////////
+function buildAstring2(arr, n) {
+  let x = [];
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i].length > n) {
+          x.push(arr[i])
+        }
+    };
+    console.log(x)
+    return x;
+};
+buildAstring2(str, 3);

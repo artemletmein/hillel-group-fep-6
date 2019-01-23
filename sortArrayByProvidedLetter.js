@@ -5,10 +5,8 @@ function sortByLetter(arr, n) {
     for(let i = 0; i < arr.length; i++){
         let y = arr[i].split('');
         y.forEach(function(item){
-            if(item.match(l)){
-                console.log(arr[i]);
-            }
-        })
+            let count = item.match(l);
+            });
     }
 };
 sortByLetter(arr1, 'e');
